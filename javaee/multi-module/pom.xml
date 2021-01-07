@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>javaee</artifactId>
+        <groupId>org.dip</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.dip.multimodule</groupId>
+    <artifactId>multi-module</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>java</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <version.api.jakartaee>8.0.0</version.api.jakartaee>
+        <version.api.microprofile>3.3</version.api.microprofile>
+
+        <version.plugin.maven.compiler>3.8.1</version.plugin.maven.compiler>
+        <version.plugin.maven.ear>3.0.2</version.plugin.maven.ear>
+        <version.plugin.maven.ejb>3.1.0</version.plugin.maven.ejb>
+
+        <version.plugin.maven.surefire>2.22.2</version.plugin.maven.surefire>
+        <version.plugin.maven.failsafe>2.22.2</version.plugin.maven.failsafe>
+        <version.plugin.maven.jacoco>0.8.6</version.plugin.maven.jacoco>
+        <version.plugin.maven.sonar>3.7.0.1746</version.plugin.maven.sonar>
+        <version.api.jupiter>5.6.2</version.api.jupiter>
+
+        <!-- Sonar -->
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.projectName>multi-module</sonar.projectName>
+        <sonar.projectVersion>master</sonar.projectVersion>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.language>java</sonar.language>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${project.reporting.outputDirectory}\jacoco\jacoco.xml,
+            ${project.reporting.outputDirectory}\jacoco-aggregate\jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
+
+    </properties>
+
+</project>
